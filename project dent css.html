@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dento Website</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        header {
+            width: 100%;
+            height: 40px;
+            background-color: #f4f4f4;
+            z-index: 1;
+            display: flex;
+        }
+
+        .header-1 {
+            width: 48%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 80px;
+        }
+
+        .header-1 h5 {
+            margin: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .header-1 h5 .TextHover {
+            visibility: hidden;
+            width: 150px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 5px;
+            position: absolute;
+            z-index: 1;
+            /* bottom: 150%; */
+            top: 100%;
+            left: 50%;
+            margin-left: -60px;
+        }
+
+        .header-1 h5 .TextHover::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            /* margin-left: -5px; */
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+        }
+
+        .header-1 h5:hover .TextHover {
+            visibility: visible;
+        }
+
+        .header-2 {
+            width: 40%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 320px;
+        }
+
+        .header-2 h5 {
+            margin: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .header-2 h5 i {
+            font-size: 20px;
+        }
+
+        .header-2 h5 .TextHover {
+            visibility: hidden;
+            width: 150px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            top: 100%;
+            left: 50%;
+            margin-left: -60px;
+        }
+
+        .header-2 h5 .TextHover::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            border-width: 5px;
+            border-style: solid;
+        }
+
+        .header-2 h5:hover .TextHover {
+            visibility: visible;
+        }
+
+        .header-2 h5 i {
+            color: grey;
+        }
+
+        .header-2 h5 i:hover {
+            color: #00aeef;
+        }
+
+        nav {
+            background-color: #00000000;
+            height: 80px;
+            width: 100%;
+            z-index: 1;
+            display: flex;
+            position: sticky;
+        }
+
+
+        .logo {
+            height: 100%;
+            width: 20%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .navbar {
+            height: 70px;
+            width: 50%;
+
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+            position: relative;
+            top: 10px;
+            left: 30px;
+        }
+
+        .navbar ul li {
+            display: inline-block;
+        }
+
+        .navbar ul li a {
+            color: black;
+            font-size: 20x;
+            font-weight: bold;
+            font-variant: small-caps;
+            padding: 0px 20px;
+            text-decoration: none;
+            line-height: 60px;
+        }
+
+        .navbar ul li a:hover {
+            color: #00aeef;
+        }
+
+        .navbar ul .subnav1 {
+            display: none;
+            position: absolute;
+            top: 60px;
+
+        }
+
+        .navbar ul li:hover>.subnav1 {
+            display: inherit;
+
+        }
+
+        .navbar ul .subnav1 li {
+            background-color: white;
+            display: list-item;
+            list-style-type: none;
+            width: 150px;
+        }
+
+        .navbar ul .subnav1 li {
+            position: relative;
+            left: 60px;
+            /* text-align: center; */
+        }
+
+        .navbar ul .subnav2 {
+            display: none;
+            position: absolute;
+            top: 60px;
+
+        }
+
+        .navbar ul li:hover>.subnav2 {
+            display: inherit;
+
+        }
+
+        .navbar ul .subnav2 li {
+            background-color: white;
+            display: list-item;
+            list-style-type: none;
+            width: 150px;
+        }
+
+        .navbar ul .subnav2 li {
+            position: relative;
+            left: 480px;
+            /* text-align: center; */
+        }
+
+
+
+
+        .btn {
+            width: 20%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn button {
+            padding: 10px;
+            width: 200px;
+            font-size: 15px;
+            font-variant: small-caps;
+            color: white;
+            background-color: #00aeef;
+            border: none;
+        }
+
+        .btn button:hover {
+            background-color: transparent;
+            border: 2px solid #00aeef;
+            color: #00aeef;
+        }
+
+        .Main {
+            width: 100%;
+            height: 92vh;
+            background-image: url('./Img1.webp');
+            background-repeat: no-repeat;
+            background-size: fill;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .Main-Body {
+            background-color: hsla(208, 63%, 15%, 0.8);
+            height: 92vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Main-Body p {
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            width: 60%;
+            line-height: 1.5;
+        }
+
+        .btn1 {
+            padding: 15px;
+            width: 200px;
+            font-size: 20px;
+            font-variant: small-caps;
+            color: white;
+            background-color: #00aeef;
+            border: none;
+        }
+
+        .btn1:hover {
+            background-color: transparent;
+            border: 2px solid #00aeef;
+            color: #00aeef;
+        }
+
+        .btn2 {
+            padding: 15px;
+            width: 200px;
+            font-size: 20px;
+            font-variant: small-caps;
+            color: #00aeef;
+            background-color: transparent;
+            border: 2px solid #00aeef;
+            margin: 10px;
+        }
+
+        .Box-1 {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .Box-1-Img {
+            height: 800px;
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            /* margin-left: 50px; */
+        }
+
+        .Box-1-Img img {
+            width: 80%;
+            height: 600px;
+        }
+
+        .Box-1-Content {
+            width: 40%;
+            margin: 50px;
+        }
+
+        .Box-2 {
+            width: 100%;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .box1,
+        .box2,
+        .box3,
+        .box4 {
+            width: 15%;
+            height: 180px;
+            margin: 40px;
+            display: grid;
+            place-items: center;
+        }
+
+        .Box-3 {
+            background-image: url('../Required-Files/dental-tools.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 600px;
+            background-attachment: fixed;
+        }
+
+        .Box-3-Body {
+            background-color: hsla(208, 63%, 15%, 0.8);
+            height: 600px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+        }
+
+        .Box-3-box-1 {
+            width: 60%;
+            height: 300px;
+            margin: 0px 80px 80px 80px;
+        }
+
+        .Box-3-box-1 h1 {
+            color: white;
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .Box-3-box-2 {
+            width: 500px;
+            height: 400px;
+            margin-top: 100px;
+            margin-right: 50px;
+        }
+
+        .Box-4 {
+            width: 100%;
+            height: 110vh;
+        }
+
+        .btn3 {
+            padding: 15px;
+            width: 200px;
+            font-size: 20px;
+            font-variant: small-caps;
+            color: white;
+            background-color: #00aeef;
+            border: none;
+            position: relative;
+            top: 80px;
+            left: 600px;
+        }
+
+        .btn3:hover {
+            background-color: transparent;
+            border: 2px solid #00aeef;
+            color: #00aeef;
+        }
+
+        .Box-5 {
+            background-image: url('./Img3.webp');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 700px;
+            background-attachment: fixed;
+        }
+
+        .Box-5-box1 {
+            background-color: hsla(208, 63%, 15%, 0.8);
+            height: 700px;
+            width: 100%;
+        }
+
+        .btn4 {
+            padding: 15px;
+            width: 200px;
+            font-size: 20px;
+            font-variant: small-caps;
+            color: white;
+            background-color: #00aeef;
+            border: none;
+            position: relative;
+            top: 80px;
+            left: 600px;
+        }
+
+        .btn4:hover {
+            background-color: transparent;
+            border: 2px solid #00aeef;
+            color: #00aeef;
+        }
+
+        .Box-6 {
+            width: 100%;
+            height: 800px;
+        }
+
+        .Box-6-box1 {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 50px;
+
+        }
+
+        .dent1 {
+            background-color: #f4f4f4;
+            background-image: url(./img4.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 400px;
+            height: 400px;
+            margin: 20px;
+        }
+
+        .dent2 {
+            background-color: #f4f4f4;
+            background-image: url(./img5.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 400px;
+            height: 400px;
+            margin: 20px;
+
+        }
+
+        .dent3 {
+            background-color: #f4f4f4;
+            background-image: url(./img6.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 400px;
+            height: 400px;
+            margin: 20px;
+        }
+
+        .Box-7 {
+            background-image: url('./Img7.webp');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 400px;
+            background-attachment: fixed;
+        }
+
+        .Box-7-box1 {
+            background-color: hsla(208, 63%, 15%, 0.8);
+            height: 400px;
+            width: 100%;
+        }
+
+        .Box-7-box1 img {
+            border-radius: 50%;
+            position: relative;
+            top: 120px;
+            left: 100px;
+        }
+
+        .Box-7-box1 h5 {
+            width: 60%;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.8;
+            font-style: italic;
+            color: #ffffff;
+            position: relative;
+            left: 300px;
+            bottom: 60px;
+        }
+
+        .Box-7-box1 h6 {
+            width: 60%;
+            font-weight: 500;
+            color: #ffffff;
+            font-size: 1.5rem;
+            position: relative;
+            left: 300px;
+            bottom: 60px;
+        }
+
+        .Box-7-box1 p {
+            width: 60%;
+            font-weight: 500;
+            color: #ffffff;
+            font-size: 1rem;
+            position: relative;
+            left: 300px;
+            bottom: 60px;
+        }
+
+        .Box-8 {
+            width: 100%;
+            height: 800px;
+        }
+
+        .Box-8-box1 {
+            width: 100%;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* margin: 30px; */
+
+        }
+
+        .news1 {
+            width: 400px;
+            height: 500px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            margin: 30px;
+        }
+
+        .news2 {
+            width: 400px;
+            height: 500px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            margin: 30px;
+        }
+
+        .news3 {
+            width: 400px;
+            height: 500px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            margin: 30px;
+        }
+
+        footer {
+            background-image: url('./Img12.webp');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 500px;
+            background-attachment: fixed;
+        }
+
+        .footer-main {
+            background-color: hsla(208, 63%, 15%, 0.8);
+            height: 500px;
+            width: 100%;
+        }
+
+        .foot1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 500px;
+        }
+
+        .single-footer-widget1 {
+            width: 300px;
+            color: white;
+        }
+
+        .single-footer-widget2 {
+            width: 300px;
+            color: white;
+        }
+
+        .single-footer-widget3 {
+            width: 300px;
+            color: white;
+        }
+
+        .single-footer-widget3 table td a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .single-footer-widget3 table td a:hover {
+            color: #00aeef;
+        }
+
+        .single-footer-widget4 {
+            width: 300px;
+            color: white;
+        }
+
+        .footer-icons {
+            width: 40%;
+            height: 100%;
+            display: flex;
+        }
+
+        .footer-icons h5 {
+            margin: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-icons h5 i {
+            font-size: 20px;
+        }
+
+        .footer-icons h5 .TextHover {
+            visibility: hidden;
+            width: 150px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            top: 100%;
+            margin-left: -60px;
+        }
+
+        .footer-icons h5 .TextHover::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            border-width: 5px;
+
+        }
+
+        .footer-icons h5:hover .TextHover {
+            visibility: visible;
+        }
+
+        .footer-icons h5 i {
+            color: white;
+        }
+
+        .footer-icons h5 i:hover {
+            color: #00aeef;
+
+        }
+    </style>
+</head>
+
+<body>
+    <Header>
+        <div class="header-1">
+            <h5><i class="fa-sharp fa-solid fa-location-dot" style="color:#00aeef;"></i>
+                28 Jackson Street, Chicago, 7788569 USA
+                <span class="TextHover">
+                    28 Jackson Street, Chicago, 7788569 USA
+                </span>
+            </h5>
+            <h5><i class="fa-sharp fa-solid fa-envelope" style="color: #00aeef;"></i>
+                info.dento@gmail.com
+                <span class="TextHover">
+                    info.dento@gmail.com
+                </span>
+            </h5>
+        </div>
+        <div class="header-2">
+            <h5>
+                <i class="fa-brands fa-facebook-f"></i>
+                <span class="TextHover">
+                    Facebook
+                </span>
+            </h5>
+            <h5>
+                <i class="fa-brands fa-twitter"></i>
+                <span class="TextHover">
+                    Twitter
+                </span>
+            </h5>
+            <h5>
+                <i class="fa-brands fa-google-plus"></i>
+                <span class="TextHover">
+                    Google Plus
+                </span>
+            </h5>
+            <h5>
+                <i class="fa-brands fa-linkedin"></i>
+                <span class="TextHover">
+                    Linkedin
+                </span>
+            </h5>
+            <h5>
+                <i class="fa-brands fa-pinterest"></i>
+                <span class="TextHover">
+                    Pinterest
+                </span>
+            </h5>
+        </div>
+    </Header>
+
+    <nav>
+        <div class="logo">
+            <img src="./logo.webp" alt="logo">
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Pages<i class="fa-solid fa-angle-down" style="margin: 0px 0px 0px 10px;"></i></a>
+                    <ul class="subnav1">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Blog Details</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">DropDown</a><i class="fa-solid fa-angle-down"
+                                style="margin: 0px 0px 0px 1px ;"></i>
+
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Blog <i class="fa-solid fa-angle-down" style="margin: 0px 0px 0px 10px;"></i></a>
+                    <ul class="subnav2">
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Blog Details</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="btn">
+            <button>Booking Now</button>
+        </div>
+    </nav>
+
+    <div class="Main">
+        <div class="Main-Body">
+            <p>
+                <span style="font-size: 50px;font-weight: bold;">
+                    We Believe Everyone Should Have Easy Access To Great Dental Care
+                </span>
+                <br><br>
+                As a leading industry innovator, Dento is opening up exciting new opportunities for dental
+                professionals, investors, employees &amp; suppliers. Contact us to find out what we have to
+                offer you.
+                <br><br><br>
+                <button class="btn1">Get Started</button>
+                <button class="btn2">Contact Us</button>
+            </p>
+        </div>
+    </div>
+
+    <div class="Box-1">
+        <div class="Box-1-Img">
+            <img src="./Img2.webp" alt="Img2">
+        </div>
+        <div class="Box-1-Content">
+            <h1>About Us</h1>
+            <progress value="100" max="100" style="width: 10%;"></progress>
+            <br><br>
+            <p>Vestibulum condimentum, risus sedones honcus rutrum, salah lacus mollis zurna, nec finibusmi velit
+                advertisis. Proin vitae odin quis magna aliquet laciniae. Etiam auctor, nisi vel. Pellentesque ultrices
+                nisl quam iaculis, nec pulvinar augue.</p>
+            <br><br>
+            <h3 style="width: 100%;height: 26px;">Experience Dentist
+                <span style="position: relative; left: 400px;">80%</span>
+            </h3>
+            <progress value="80" max="100" style="width: 100%;height: 40px;"></progress>
+            <br><br>
+            <h3 style="width: 100%;height: 26px;">Modern Equipment
+                <span style="position: relative; left: 400px;">65%</span>
+            </h3>
+            <progress value="65" max="100" style="width: 100%;height: 40px;"></progress>
+            <br><br>
+            <h3 style="width: 100%;height: 26px;">Friendly Staff
+                <span style="position: relative; left: 400px;">85%</span>
+            </h3>
+            <progress value="85" max="100" style="width: 100%;height: 40px;"></progress>
+        </div>
+    </div>
+
+    <div class="Box-2">
+        <div class="box1">
+            <i class="fa-brands fa-react" style="color: #00aeef;font-size: 50px;"></i>
+            <h2 style="font-size: 50px;font-weight: bold;">20</h2>
+            <h3>Years Of Experience</h3>
+        </div>
+        <div class="box2">
+            <i class="fa-regular fa-heart" style="color: #00aeef;font-size: 50px;"></i>
+            <h2 style="font-size: 50px;font-weight: bold;">700+</h2>
+            <h3>Happy Patients</h3>
+        </div>
+        <div class="box3">
+            <i class="fa-solid fa-book" style="color: #00aeef;font-size: 50px;"></i>
+            <h2 style="font-size: 50px;font-weight: bold;">120</h2>
+            <h3>Certificate</h3>
+        </div>
+        <div class="box4">
+            <i class="fa-regular fa-id-card" style="color: #00aeef;font-size: 50px;"></i>
+            <h2 style="font-size: 50px;font-weight: bold;">40+</h2>
+            <h3>Dentist</h3>
+        </div>
+    </div>
+
+    <div class="Box-3">
+        <div class="Box-3-Body">
+            <div class="Box-3-box-1">
+                <h1>Our Services</h1>
+                <progress value="100" max="100" style="width: 10%;"></progress>
+                <div style="width: 100%;height: 150px;display: flex;">
+                    <div style="width:33.33%;height:150px ;">
+                        <i class="fa-solid fa-tooth"
+                            style="color: #d9dbde ;font-size: 80px;margin-top: 70px ;margin-left: 30px;"></i>
+                        <h2 style="color: white;margin-top: 30px;margin-left: 40px;">Tooth</h2>
+                    </div>
+                    <div style="width:33.33%;height:150px ;">
+                        <i class="fa-solid fa-teeth-open"
+                            style="color: #d9dbde ;font-size: 80px;margin-top: 40px ;margin-left: 30px;"></i>
+                        <h2 style="color: white;margin-left: 20px;margin-top: 10px;">Teeth-Open</h2>
+                    </div>
+                    <div style="width:33.33%;height:150px ;">
+                        <i class="fa-solid fa-magnifying-glass"
+                            style="color: #d9dbde ;font-size: 80px;margin-top: 40px ;margin-left: 30px;"></i>
+                        <h2 style="color: white;margin-top: 10px;margin-left: 40px;">Missing Teeth</h2>
+                    </div>
+                </div>
+                <div style="width: 100%;height: 150px;display: flex;">
+                    <div style="width:33.33%;height:150px ;">
+                        <i class="fa-solid fa-user-doctor"
+                            style="color: #d9dbde ;font-size: 80px;margin-top: 40px ;margin-left: 30px;"></i>
+                        <h2 style="color: white;margin-top: 30px;margin-left: 40px;">Doctor</h2>
+                    </div>
+                    <div style="width:33.33%;height:150px ;">
+                        <i class="fa-solid fa-hospital"
+                            style="color: #d9dbde ;font-size: 80px;margin-top: 40px ;margin-left: 30px;"></i>
+                        <h2 style="color: white;margin-top: 30px;margin-left: 40px;">Hospital</h2>
+                    </div>
+                    <div style="width:33.33%;height:150px ;">
+                        <i class="fa-solid fa-syringe"
+                            style="color: #d9dbde ;font-size: 80px;margin-top: 40px ;margin-left: 30px;"></i>
+                        <h2 style="color: white;margin-top: 30px;margin-left: 40px;">Syringe</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="Box-3-box-2">
+                <iframe width="500px" height="400px" src="https://www.youtube.com/embed/zCmiCXkyEHE?si=r9BLm6of5IG8HwDd"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <div class="Box-4">
+        <h1 style="text-align: center;margin-top: 100px;font-size: 50px;font-weight: normal;">Pricing
+            <progress value="100" max="100" style="width: 6%;height: 10px;position: relative;top: 15px;left: -140px;">
+            </progress>
+        </h1>
+        <table style="height: 600px;width: 80%;position: relative;top: 50px;left: 160px;" cellspacing="5" border="0"
+            cellpadding="10">
+            <tr style="background-color: #00aeef;">
+                <th>
+                    Service Names
+                </th>
+                <th>
+                    Stage
+                </th>
+                <th>
+                    Price
+                </th>
+            </tr>
+            <tr style="background-color: #f4f4f4;">
+                <td>Teeth Whitening Service at home</td>
+                <td>1 times</td>
+                <td>$115.00</td>
+            </tr>
+            <tr style="background-color: #f4f4f4;">
+                <td>Teeth Whitening Service at Dental Clinic</td>
+                <td>1 times</td>
+                <td>$100.00</td>
+            </tr>
+            <tr style="background-color: #f4f4f4;">
+                <td>Ceramic crowns and fillings Dental porcelain</td>
+                <td>1 times</td>
+                <td>$99.00</td>
+            </tr>
+            <tr style="background-color: #f4f4f4;">
+                <td>Remove crowns, bridges Service</td>
+                <td>1 tooth</td>
+                <td>$50.00</td>
+            </tr>
+            <tr style="background-color: #f4f4f4;">
+                <td>Covering the recession of the gums</td>
+                <td>1 times</td>
+                <td>$400.00</td>
+            </tr>
+            <tr style="background-color: #f4f4f4;">
+                <td>Consultation, impressions and preparation of models</td>
+                <td>1 times</td>
+                <td>$35.00</td>
+            </tr>
+            <tr style="background-color: #f4f4f4;">
+                <td>Removal of an old inlay, old crown</td>
+                <td>1 times</td>
+                <td>$99.00</td>
+            </tr>
+            <tr style="background-color: #f4f4f4;">
+                <td>Overlay teeth whitening ( 2 arches)</td>
+                <td>1 times</td>
+                <td>$170.00</td>
+            </tr>
+            <tr style="background-color: #f4f4f4;">
+                <td>Standard porcelain and zirconium crown on implant</td>
+                <td>1 tooth</td>
+                <td>$499.00</td>
+            </tr>
+            <tr style="background-color: #f4f4f4;">
+                <td>Implantation of an implant (price depends on system used)</td>
+                <td>1 tooth</td>
+                <td>$600.00</td>
+            </tr>
+        </table>
+        <button class="btn3">
+            READ MORE
+            <i class="fa-solid fa-arrow-right"></i>
+        </button>
+    </div>
+    <div class="Box-5">
+        <div class="Box-5-box1">
+            <h1 style="text-align: center;font-size: 40px;;color: white;position: relative;top: 100px;">Book An
+                Appointment
+                <progress value="100" max="100"
+                    style="width: 6%;height: 10px;position: relative;top: 15px;left: -280px;">
+                </progress>
+            </h1>
+            <br><br>
+            <div style="position: relative;top: 150px;height: 400px;left: 250px;width: 80%;">
+                <input type="text" placeholder="Your Name"
+                    style="width: 40%;height: 50px;background-color: hsla(0, 0%, 0%, 0.3);border: none;text-align: center;">
+                <input type="number" placeholder="Your Phone"
+                    style="width: 40%;height: 50px;background-color: hsla(0, 0%, 0%, 0.3);border: none;text-align: center;">
+                <br>
+                <br>
+                <input type="email" placeholder="Your Email"
+                    style="width: 40%;height: 50px;background-color: hsla(0, 0%, 0%, 0.3);border: none;text-align: center;">
+                <input type="text" placeholder="Your Address"
+                    style="width: 40%;height: 50px;background-color: hsla(0, 0%, 0%, 0.3);border: none;text-align: center;">
+                <br><br>
+                <select
+                    style="width: 40%;height: 50px;background-color: hsla(0, 0%, 0%, 0.3);border: none;text-align: center;color: white;">
+                    <option value="Choose Your Schedule">Choose Your Schedule</option>
+                    <option value="9 AM to 10 AM">9 AM to 10 AM</option>
+                    <option value="11 AM to 12 PM">11 AM to 12 PM</option>
+                    <option value="2 PM to 4 PM">2 PM to 4 PM </option>
+                </select>
+                <select
+                    style="width: 40%;height: 50px;background-color: hsla(0, 0%, 0%, 0.3);border: none;text-align: center;color: white;">
+                    <option value="Choose Your Schedule">Choose Your Schedule</option>
+                    <option value="9 AM to 10 AM">9 AM to 10 AM</option>
+                    <option value="11 AM to 12 PM">11 AM to 12 PM</option>
+                    <option value="2 PM to 4 PM">2 PM to 4 PM </option>
+                </select>
+                <br><br>
+                <textarea cols="40" rows="40" placeholder="Your Message"
+                    style="width: 80%;height: 50px;background-color: hsla(0, 0%, 0%, 0.3);border: none;text-align: center;"></textarea>
+            </div>
+            <button class="btn4">BOOKING NOW</button>
+        </div>
+    </div>
+
+    <div class="Box-6">
+        <h1 style="text-align: center;font-size: 40px;position: relative;top: 100px;">
+            Our Dentist
+            <progress value="100" max="100" style="width: 6%;height: 10px;position: relative;top: 15px;left: -180px;">
+            </progress>
+            <div class="Box-6-box1">
+                <div class="dent1">
+                    <div
+                        style="width: 100%;height: 100px;position: relative;top: 300px;padding: 10px;text-align: center;">
+                        <h5 style="color: black;font-size: 25px;margin: 5px;">Michael Barley</h5>
+                        <h6 style="color: black;font-size: 20px">Implant Expert</h6>
+                    </div>
+                </div>
+                <div class="dent2">
+                    <div
+                        style="width: 100%;height: 100px;position: relative;top: 300px;padding: 10px;text-align: center;">
+                        <h5 style="color: black;font-size: 25px;margin: 5px;">Michael Barley</h5>
+                        <h6 style="color: black;font-size: 20px">Implant Expert</h6>
+                    </div>
+                </div>
+                <div class="dent3">
+                    <div
+                        style="width: 100%;height: 100px;position: relative;top: 300px;padding: 10px;text-align: center;">
+                        <h5 style="color: black;font-size: 25px;margin: 5px;">Michael Barley</h5>
+                        <h6 style="color: black;font-size: 20px">Implant Expert</h6>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div class="Box-7">
+        <div class="Box-7-box1">
+            <img src="./img8.webp" alt="">
+            <h5>“I'd been avoiding the dentist for years due to bad experiences. A reminder SMS is sent the working day
+                beforehand. I also had a call confirming appointment. I have been a patient ever since. My dentist is
+                very reassuring and
+                very helpful. Excellent treatment and advice.”</h5>
+            <h6>Arron Ramsey</h6>
+            <p>Dental Patient</p>
+        </div>
+    </div>
+
+    <div class="Box-8">
+        <h1 style="text-align: center;font-size: 40px;position: relative;top: 100px;">
+            The Latest News
+            <progress value="100" max="100" style="width: 6%;height: 10px;position: relative;top: 15px;left: -220px;">
+            </progress>
+            <div class="Box-8-box1">
+                <div class="news1">
+                    <div style="height: 50%;width: 100%;">
+                        <img src="./img9.webp" alt="" width="100%">
+                    </div>
+                    <div style="height: 50%;position: relative;top: 50px;padding: 10px;text-align: center;">
+                        <a href="./blog-details.html" class="post-title"
+                            style="color: #333333;text-decoration: none;    font-size: 20px;font-weight: 700;display: block;margin-bottom: 10px;">How
+                            your mouth bacteria can harm your lungs</a>
+                        <p style="line-height: 1.5;color: #707070;font-size: 14px;">Donec tempor, lorem et euismod
+                            eleifend, est lectus laoreet ante, sed accusan
+                            justo diam ...</p>
+                        <div class="post-meta">
+                            <a href="#" style="font-size: 15px;text-decoration: none;color: #333333;"><i
+                                    class="fa-regular fa-clock"></i> 28 Sep 2018</a>
+                            <a href="#" style="font-size: 15px;text-decoration: none;color: #333333;"><i
+                                    class="fa-regular fa-comments"></i> 3 Comments</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="news2">
+                    <div style="height: 50%;width: 100%;">
+                        <img src="./img10.webp" alt="" width="100%">
+                    </div>
+                    <div style="height: 50%;position: relative;top: 50px;padding: 10px;text-align: center;">
+                        <a href="./blog-details.html" class="post-title"
+                            style="color: #333333;text-decoration: none;    font-size: 20px;font-weight: 700;display: block;margin-bottom: 10px;">
+                            What is the best kind of toothpaste to use?
+                        </a>
+                        <p style="line-height: 1.9;color: #707070;font-size: 14px;">Donec tempor, lorem et euismod
+                            eleifend, est lectus laoreet ante, sed accusan
+                            justo diam ...</p>
+                        <div class="post-meta">
+                            <a href="#" style="font-size: 15px;text-decoration: none;color: #333333;"><i
+                                    class="fa-regular fa-clock"></i> 28 Sep 2018</a>
+                            <a href="#" style="font-size: 15px;text-decoration: none;color: #333333;"><i
+                                    class="fa-regular fa-comments"></i> 3 Comments</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="news3">
+                    <div style="height: 50%;width: 100%;">
+                        <img src="./img11.webp" alt="" width="100%">
+                    </div>
+                    <div style="height: 50%;position: relative;top: 50px;padding: 10px;text-align: center;">
+                        <a href="./blog-details.html" class="post-title"
+                            style="color: #333333;text-decoration: none;    font-size: 20px;font-weight: 700;display: block;margin-bottom: 10px;">
+                            Why you should avoid sipping your drinks
+                        </a>
+                        <p style="line-height: 1.9;color: #707070;font-size: 14px;">Donec tempor, lorem et euismod
+                            eleifend, est lectus laoreet ante, sed accusan
+                            justo diam ...</p>
+                        <div class="post-meta">
+                            <a href="#" style="font-size: 15px;text-decoration: none;color: #333333;"><i
+                                    class="fa-regular fa-clock"></i> 28 Sep 2018</a>
+                            <a href="#" style="font-size: 15px;text-decoration: none;color: #333333;"><i
+                                    class="fa-regular fa-comments"></i> 3 Comments</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <footer>
+        <div class="footer-main">
+            <div class="foot1">
+                <div class="single-footer-widget1">
+                    <a href="./Index.html"><img src="./logo.webp" alt=""></a>
+                    <br><br>
+                    <p>Etiam sutor risus, dapibus act elefend katen, lacinia sitamet denim. Mauris sagittis kansa
+                        interdum dignissim.</p>
+                    <br>
+                    <div>
+                        <p style="font-size: 14px;"><i class="fa-sharp fa-solid fa-location-dot"
+                                style="color:#00aeef;"></i> 28 Jackson Street,
+                            Chicago, 7788569 USA</p>
+                        <p style="font-size: 14px;"><i class="fa-solid fa-phone" style="color:#00aeef;"></i> +84. 2252.
+                            2250. 122</p>
+                        <p style="font-size: 14px;"><i class="fa-sharp fa-solid fa-envelope"
+                                style="color: #00aeef;"></i> info.dento@gmail.com
+                        </p>
+                    </div>
+                </div>
+                <div class="single-footer-widget2">
+                    <h3>Opening Hours</h3>
+                    <br>
+                    <table cellspacing="5" cellpadding="10" style="height:150px ;width: 100%;">
+                        <tr>
+                            <td>Mon-Wed</td>
+                            <td>8.00-18.00</td>
+                        </tr>
+                        <tr>
+                            <td>Thu-Fri</td>
+                            <td>8.00-17.00</td>
+                        </tr>
+                        <tr>
+                            <td>Sat</td>
+                            <td>9.00-17.00</td>
+                        </tr>
+                        <tr>
+                            <td>Sun</td>
+                            <td>10.00-17.00</td>
+                        </tr>
+                        <tr>
+                            <td>Holiday</td>
+                            <td>Closed</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="single-footer-widget3">
+                    <h3>Quick Link</h3>
+                    <br>
+                    <table cellspacing="5" cellpadding="10" style="height:150px ;width: 100%;">
+                        <tr>
+                            <td>
+                                <a href="#">About</a>
+                            </td>
+                            <td>
+                                <a href="#">FaQs</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#">Contact</a>
+                            </td>
+                            <td>
+                                <a href="#">Policy</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#">News</a>
+                            </td>
+                            <td>
+                                <a href="#">Advisors</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#">Careers</a>
+                            </td>
+                            <td>
+                                <a href="#">Dentist</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="#">Services</a>
+                            </td>
+                            <td>
+                                <a href="#">Legals</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="single-footer-widget4">
+                    <h3>Newsletter</h3>
+                    <br>
+                    <p>We will send weekly newest article and some great </p>
+                    <br>
+                    <div style="display: flex;width: 250px;height: 40px;">
+                        <input type="email" placeholder="Email Address"
+                            style="text-align: center;width: 80%;border: none;height: 100%;">
+                        <button style="width: 20%;border: none;height: 100%;background-color: #00aeef;"><i
+                                class="fa-brands fa-telegram" style="font-size: 25px;color: white;"></i></button>
+                    </div>
+                    <br>
+                    <div class="footer-icons">
+                        <h5>
+                            <i class="fa-brands fa-facebook"></i>
+                            <span class="TextHover">
+                                Facebook
+                            </span>
+                        </h5>
+                        <h5>
+                            <i class="fa-brands fa-twitter"></i>
+                            <span class="TextHover">
+                                Twitter
+                            </span>
+                        </h5>
+                        <h5>
+                            <i class="fa-brands fa-google-plus-g"></i>
+                            <span class="TextHover">
+                                Google Plus
+                            </span>
+                        </h5>
+                        <h5>
+                            <i class="fa-brands fa-linkedin"></i>
+                            <span class="TextHover">
+                                Linkedin
+                            </span>
+                        </h5>
+                        <h5>
+                            <i class="fa-brands fa-pinterest"></i>
+                            <span class="TextHover">
+                                Pinterest
+                            </span>
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
